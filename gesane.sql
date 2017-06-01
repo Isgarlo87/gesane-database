@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 01-06-2017 a las 08:25:21
+-- Tiempo de generación: 01-06-2017 a las 08:39:05
 -- Versión del servidor: 5.6.35
 -- Versión de PHP: 5.6.30
 
@@ -39,6 +39,25 @@ CREATE TABLE `analitica` (
   `id_episodio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `analitica`
+--
+
+INSERT INTO `analitica` (`id`, `informe`, `fecha_peticion`, `importe`, `id_prioridad`, `id_tipomuestra`, `id_anticoagulante`, `id_episodio`) VALUES
+(1, 'Phasellus eu mollis nisi, ac scelerisque nunc. Nullam sed erat tortor. Proin laoreet, nibh vel volutpat feugiat, libero dolor consectetur ligula, ut maximus odio enim at quam. Ut hendrerit urna ligula, a mollis nunc fermentum ut. Donec vehicula mattis est, ornare convallis enim ornare a. Nullam iaculis tellus id mauris finibus rhoncus. Nulla metus velit, accumsan commodo augue eget, dignissim consequat mi. In quis tellus ante. Donec mollis ullamcorper blandit. Ut sagittis neque sapien, ullamcorper facilisis nulla eleifend facilisis. Ut a feugiat libero. Suspendisse potenti. Fusce fringilla ex metus, ac venenatis dui hendrerit sit amet. Aliquam erat volutpat. Mauris molestie lacus ac nisi tempor, consectetur consectetur dui luctus. Fusce vestibulum augue vel dui dictum pulvinar.', '2016-12-13 00:00:00', 120, 2, 1, 2, 2),
+(2, 'Proin ac vestibulum dui. Morbi justo ipsum, ultricies ut ultrices in, rhoncus a enim. Aliquam semper, tellus quis eleifend eleifend, quam magna dictum ex, quis maximus mi erat quis justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque rhoncus luctus volutpat. Proin quis dignissim leo, sit amet finibus libero. Suspendisse potenti. Integer sed finibus libero, in dapibus tellus. Donec mollis lectus vitae pulvinar laoreet. Maecenas varius neque eget pulvinar gravida. Duis tincidunt, odio non posuere sagittis, libero felis ullamcorper odio, suscipit suscipit elit erat sit amet felis. Aliquam volutpat ullamcorper est vel maximus.', '2016-10-04 06:00:00', 335, 4, 8, 9, 1),
+(3, 'Proin quis dignissim leo, sit amet finibus libero. Suspendisse potenti. Integer sed finibus libero, in dapibus tellus. Donec mollis lectus vitae pulvinar laoreet. Maecenas varius neque eget pulvinar gravida. Duis tincidunt, odio non posuere sagittis, libero felis ullamcorper odio, suscipit suscipit elit erat sit amet felis. Aliquam volutpat ullamcorper est vel maximus.', '2016-12-25 00:00:00', 2667, 4, 6, 2, 3),
+(4, 'Duis tincidunt, odio non posuere sagittis, libero felis ullamcorper odio, suscipit suscipit elit erat sit amet felis. Aliquam volutpat ullamcorper est vel maximus.', '2016-07-04 00:00:00', 4543, 2, 4, 5, 3),
+(5, 'Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula. In metus tellus, interdum id lacus at, luctus aliquet neque. Sed eu diam ut lectus fermentum iaculis. Nulla pharetra metus et sem tempus dignissim. Cras ornare ac urna ut condimentum. Aliquam ut ipsum ullamcorper, accumsan arcu a, rhoncus metus.', '2016-12-26 00:00:00', 4113, 3, 9, 2, 3),
+(6, 'Integer imperdiet, nisi at fringilla porta, diam augue tempus felis, eu dictum odio arcu elementum felis. Phasellus convallis urna vulputate dolor vestibulum malesuada. Donec quis lectus ipsum. Suspendisse pharetra, magna at cursus vulputate, tellus felis hendrerit dui, at auctor nunc lacus ac eros. Nunc lorem felis, semper id libero vulputate, egestas lobortis massa. Nam feugiat, elit id luctus facilisis, mi nunc facilisis neque, a posuere enim libero sed justo. Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula. In metus tellus, interdum id lacus at, luctus aliquet neque. Sed eu diam ut lectus fermentum iaculis.', '2016-12-05 00:00:00', 1112, 6, 3, 8, 4),
+(7, 'Nam feugiat, elit id luctus facilisis, mi nunc facilisis neque, a posuere enim libero sed justo. Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula.', '2016-12-04 00:00:00', 12113, 5, 4, 2, 10),
+(8, 'Integer imperdiet, nisi at fringilla porta, diam augue tempus felis, eu dictum odio arcu elementum felis. Phasellus convallis urna vulputate dolor vestibulum malesuada. Donec quis lectus ipsum. Suspendisse pharetra, magna at cursus vulputate, tellus felis hendrerit dui, at auctor nunc lacus ac eros. Nunc lorem felis, semper id libero vulputate, egestas lobortis massa. Nam feugiat, elit id luctus facilisis, mi nunc facilisis neque, a posuere enim libero sed justo. Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula. In metus tellus, interdum id lacus at, luctus aliquet neque. Sed eu diam ut lectus fermentum iaculis. Nulla pharetra metus et sem tempus dignissim. Cras ornare ac urna ut condimentum. Aliquam ut ipsum ullamcorper, accumsan arcu a, rhoncus metus.', '2016-12-12 00:00:00', 2331, 4, 7, 3, 10),
+(9, 'Nunc lorem felis, semper id libero vulputate, egestas lobortis massa. Nam feugiat, elit id luctus facilisis, mi nunc facilisis neque, a posuere enim libero sed justo. Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula.', '2016-05-02 00:00:00', 3211, 1, 2, 6, 10),
+(10, 'Integer imperdiet, nisi at fringilla porta, diam augue tempus felis, eu dictum odio arcu elementum felis. Phasellus convallis urna vulputate dolor vestibulum malesuada. Donec quis lectus ipsum. Suspendisse pharetra, magna at cursus vulputate, tellus felis hendrerit dui, at auctor nunc lacus ac eros. Nunc lorem felis, semper id libero vulputate, egestas lobortis massa. Nam feugiat, elit id luctus facilisis, mi nunc facilisis neque, a posuere enim libero sed justo. Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula. In metus tellus, interdum id lacus at, luctus aliquet neque. Sed eu diam ut lectus fermentum iaculis. Nulla pharetra metus et sem tempus dignissim. Cras ornare ac urna ut condimentum. Aliquam ut ipsum ullamcorper, accumsan arcu a, rhoncus metus.', '2016-12-12 00:00:00', 1000, 2, 2, 6, 8),
+(11, 'Integer imperdiet, nisi at fringilla porta, diam augue tempus felis, eu dictum odio arcu elementum felis. Phasellus convallis urna vulputate dolor vestibulum malesuada. Donec quis lectus ipsum. Suspendisse pharetra, magna at cursus vulputate, tellus felis hendrerit dui, at auctor nunc lacus ac eros. Nunc lorem felis, semper id libero vulputate, egestas lobortis massa. Nam feugiat, elit id luctus facilisis, mi nunc facilisis neque, a posuere enim libero sed justo. Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula. In metus tellus, interdum id lacus at, luctus aliquet neque. Sed eu diam ut lectus fermentum iaculis. Nulla pharetra metus et sem tempus dignissim. Cras ornare ac urna ut condimentum. Aliquam ut ipsum ullamcorper, accumsan arcu a, rhoncus metus. Integer imperdiet, nisi at fringilla porta, diam augue tempus felis, eu dictum odio arcu elementum felis. Phasellus convallis urna vulputate dolor vestibulum malesuada. Donec quis lectus ipsum. Suspendisse pharetra, magna at cursus vulputate, tellus felis hendrerit dui, at auctor nunc lacus ac eros. Nunc lorem felis, semper id libero vulputate, egestas lobortis massa. Nam feugiat, elit id luctus facilisis, mi nunc facilisis neque, a posuere enim libero sed justo. Vestibulum elementum metus erat. Sed augue risus, pharetra in imperdiet luctus, sagittis sit amet enim. Curabitur nec placerat urna. Pellentesque id purus mauris. Aliquam sit amet congue ligula. In metus tellus, interdum id lacus at, luctus aliquet neque. Sed eu diam ut lectus fermentum iaculis. Nulla pharetra metus et sem tempus dignissim. Cras ornare ac urna ut condimentum. Aliquam ut ipsum ullamcorper, accumsan arcu a, rhoncus metus.', '2016-12-18 00:00:00', 1229, 3, 10, 1, 9),
+(12, 'Cras ornare ac urna ut condimentum. Aliquam ut ipsum ullamcorper, accumsan arcu a, rhoncus metus.', '2016-12-04 00:00:00', 322, 5, 2, 5, 3),
+(13, '111', '2017-05-29 00:00:00', 111, 3, 1, 2, 4);
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +68,22 @@ CREATE TABLE `anticoagulante` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `anticoagulante`
+--
+
+INSERT INTO `anticoagulante` (`id`, `descripcion`) VALUES
+(1, 'Inhibidores de la vitamina K'),
+(2, 'Inhibidores directos de trombina'),
+(3, 'Inhibidores directos del factor Xa'),
+(4, 'Anticoagulantes orales directos (ACODs)'),
+(5, 'Rivaroxaban'),
+(6, 'Apixaban'),
+(7, 'Edoxaban'),
+(8, 'lepirudina'),
+(9, 'argatrobán'),
+(10, 'deshirudina');
 
 -- --------------------------------------------------------
 
@@ -227,6 +262,33 @@ CREATE TABLE `especialidad` (
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `especialidad`
+--
+
+INSERT INTO `especialidad` (`id`, `descripcion`) VALUES
+(1, 'Anatomía patológica'),
+(2, 'Anestesiología y reanimación.'),
+(3, 'Cirugía general y del aparato digestivo.'),
+(4, 'Medicina familiar y comunitaria.'),
+(5, 'Medicina interna.'),
+(6, 'Neumología'),
+(7, 'Neurocirugía'),
+(8, 'Neurología'),
+(9, 'Obstetricia y ginecología.'),
+(10, 'Oftalmología'),
+(11, 'Otorrinolaringología'),
+(12, 'Pediatría'),
+(13, 'Psiquiatría'),
+(14, 'Traumatología'),
+(15, 'Urología'),
+(16, 'Alergóloga'),
+(17, 'Inmunología'),
+(18, 'Nefrología'),
+(19, 'Neurofisiología'),
+(20, 'Reumatología'),
+(21, 'Microbiología');
+
 -- --------------------------------------------------------
 
 --
@@ -268,6 +330,22 @@ CREATE TABLE `imagen` (
   `id_tecnica` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `imagen`
+--
+
+INSERT INTO `imagen` (`id`, `descripcion`, `fecha`, `ubicacion`, `id_prueba`, `id_tecnica`) VALUES
+(1, 'Imagen de tipo educativa', '2016-11-26 00:00:00', 'Cabeza', 1, 3),
+(2, 'Imagen de tipo sanitaria', '2016-11-28 00:00:00', 'Troco', 2, 1),
+(3, 'Imagen de tipo bucodental', '2016-11-13 00:00:00', 'Troco lateral', 3, 2),
+(4, 'Imagen mostrando un corazon', '2016-11-16 00:00:00', 'Bucal', 4, 4),
+(5, 'Imagen imitando un pulmon fumador', '2016-11-18 00:00:00', 'Maxilar', 1, 5),
+(6, 'Imagen de voluntarios cruz roja', '2016-11-21 00:00:00', 'Craneal', 2, 6),
+(7, 'Imagen de ambulancias de urgencia', '2016-11-20 00:00:00', 'Dorsal', 3, 6),
+(8, 'Imagen de operacion de urgencia', '2016-11-14 00:00:00', 'Lumbar', 4, 7),
+(9, 'Imagen de enfermo cronico', '2016-11-11 00:00:00', 'Lateral', 5, 8),
+(10, 'Imagen mostrando el funcionamiento de una incubadora', '2016-11-30 00:00:00', 'Pierna derecha', 1, 8);
+
 -- --------------------------------------------------------
 
 --
@@ -297,6 +375,27 @@ CREATE TABLE `medicamento` (
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `medicamento`
+--
+
+INSERT INTO `medicamento` (`id`, `descripcion`) VALUES
+(1, 'acetadote'),
+(2, 'tylenol'),
+(3, 'dulcolax'),
+(4, 'hibiclens'),
+(5, 'valium'),
+(6, 'teveten'),
+(7, 'motrin'),
+(8, 'vicodin'),
+(9, 'neurontin'),
+(10, 'antizol'),
+(11, 'isuprel'),
+(12, 'mutamycin'),
+(13, 'levatol'),
+(14, 'trental'),
+(15, 'astudal');
+
 -- --------------------------------------------------------
 
 --
@@ -317,6 +416,29 @@ CREATE TABLE `medico` (
   `id_categoriaprofesional` int(11) NOT NULL,
   `id_centro` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `medico`
+--
+
+INSERT INTO `medico` (`id`, `id_servicio`, `id_especialidad`, `dni`, `nombre`, `primer_apellido`, `segundo_apellido`, `fecha_nacimiento`, `num_colegiado`, `email`, `id_categoriaprofesional`, `id_centro`) VALUES
+(1, 11, 11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(2, 2, 12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(3, 14, 8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(4, 8, 19, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(5, 4, 17, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(6, 6, 15, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(7, 6, 10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(8, 4, 11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(9, 16, 16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(10, 3, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(11, 14, 21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(12, 4, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(13, 6, 9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(14, 16, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(15, 7, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(16, 7, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(17, 15, 8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -455,6 +577,18 @@ CREATE TABLE `prioridad` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `prioridad`
+--
+
+INSERT INTO `prioridad` (`id`, `descripcion`) VALUES
+(1, 'muy baja'),
+(2, 'baja'),
+(3, 'media'),
+(4, 'alta'),
+(5, 'muy alta'),
+(6, 'preferente');
 
 -- --------------------------------------------------------
 
@@ -731,6 +865,24 @@ CREATE TABLE `prueba` (
   `id_episodio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `prueba`
+--
+
+INSERT INTO `prueba` (`id`, `informe`, `fecha_peticion`, `importe`, `id_episodio`) VALUES
+(1, 'Nulla facilisi. Nam et augue turpis. Vivamus placerat sit amet lorem quis rhoncus. Vestibulum maximus dolor eu congue ornare. Vestibulum ex lorem, interdum eu vehicula vel, aliquam id dui. Aenean a mauris et odio ullamcorper commodo eu vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent lacinia, neque sed placerat tristique, eros enim consectetur ex, in auctor nulla neque vel arcu.\r\n\r\nDonec eget gravida dolor. Maecenas elementum condimentum dictum. Nam ultricies neque ut magna suscipit commodo vel et sem. Nunc a dui quis elit consequat elementum. Pellentesque bibendum bibendum purus, ut ultricies nisi consequat vitae. Phasellus id sodales risus, posuere elementum erat. Maecenas sed lectus eu erat pretium rhoncus sed at enim.\r\n\r\nVivamus rutrum dolor ac facilisis lacinia. Pellentesque congue nisl odio, id convallis purus tempus vel. Donec mattis ultricies massa ac accumsan. Nulla arcu ligula, viverra non lacinia at, pulvinar sit amet libero. Morbi varius leo commodo nisl imperdiet, eget rutrum neque porta. Sed non leo interdum, vestibulum purus quis, suscipit eros. Praesent odio risus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-12-30 03:13:00', 444, 10),
+(2, 'Nulla facilvamus placerat sit amet lorem quis rhoncus. Vestiba. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-12-04 00:00:00', 23, 2),
+(3, 'Nulgue turpis. Vivamus placerat sit amet lorem quis rhoncus. Vestibulum maximus dolor eu congue ornare. Vestibulum ex lorem, interdum eu vehicula vel, aliquam id dui. Aenean a mauris et odio ullamcorper commodo eu vel justo. Vestibulum ante ipsum primis in faucibus orci luctusuis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-12-04 00:00:00', 456, 4),
+(4, 'Nec eget gravida dolor. Maecenas elemena. Pellentesque congue nisl odio, id convallis purus tempus vel. Donec mattis ultricies massa ac accumsan. Nulla arcu ligula, viverra non lacinia at, pulvinar sit amet libero. Morbi varius leo commodo nisl imperdiet, eget rutrum neque porta. Sed non leo interdum, vestibulum purus quis, suscipit eros. Praesent odio risus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-10-09 00:00:00', 399, 8),
+(5, 'Nusus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-10-23 00:00:00', 788, 2),
+(6, 'Nulerat sit amet lorem quis rhoncus. Vestibulum maximus dolor eu congue ornare. Vestibulum ex lorem, interdum eu vehicula vel, aliurus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-10-30 00:00:00', 322, 8),
+(7, 'Nuldio, id convallis purus tempus vel. Donec mattis ultricies massa ac accumsan. Nulla arcu ligula, viverra non lacinia at, pulvinar sit amet libero. Morbi varius leo commodo nisl imperdiet, eget rutrum neque porta. Sed non leo interdum, vestibulum purus quis, suscipit eros. Praesent odio risus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-12-01 00:00:00', 122, 2),
+(8, 'Nulnia, neque sed placerat tristique, eros enim consectetur ex, in auctor nulla neque vel aenas elementum condimentum dictum. Nam ultricies neque ut magna suscipit commodo vel et sem. Nunc a dui quis elit consequat elementum. at, pulvinar sit amet libero. Morbi varius leo commodo nisl imperdiet, eget rutrum neque porta. Sed non leo interdum, vestibulum purus quis, suscipit eros. Praesent odio risus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-12-20 00:00:00', 76, 12),
+(9, 'Nerra non lacinia at, pulvinar sit amet libero. Morbi varius leo commodo nisl imperdiet, eget rutrum neque porta. Sed non leo interdum, vestibulum purus quis, suscipit eros. Praesent odio risus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-11-13 00:00:00', 555, 3),
+(10, 'Nerdiet, eget rutrum neque porta. Sed non leo interdum, vestibulum purus quis, suscipit eros. Praesent odio risus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-11-20 00:00:00', 778, 7),
+(11, 'Nulrdierdum, vestibulum purus quis, suscipit eros. Praesent odio risus, tristique at purus quis, imperdiet dictum magna. Sed pellentesque in dui eu dignissim. Etiam quam augue, convallis ut luctus at, congue id libero. Nam condimentum, lacus quis vulputate blandit, enim libero sodales lacus, eu vulputate felis mi sed turpis. Pellentesque in ullamcorper magna.', '2016-12-05 00:00:00', 722, 4),
+(12, 'gfdgdfgdfg', '2017-05-24 11:24:00', 1222, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -743,6 +895,28 @@ CREATE TABLE `servicio` (
   `codigo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `id_tiposervicio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `servicio`
+--
+
+INSERT INTO `servicio` (`id`, `descripcion`, `codigo`, `id_tiposervicio`) VALUES
+(1, 'Anatomía', NULL, 0),
+(2, 'Anestesiología y reanimación', NULL, 0),
+(3, 'Cirugía general', NULL, 0),
+(4, 'Medicina familiar', NULL, 0),
+(5, 'Medicina interna', NULL, 0),
+(6, 'Neumología', NULL, 0),
+(7, 'Neurocirugía', NULL, 0),
+(8, 'Neurología', NULL, 0),
+(9, 'Obstetricia y ginecología.', NULL, 0),
+(10, 'Oftalmología', NULL, 0),
+(11, 'Otorrinolaringología', NULL, 0),
+(12, 'Pediatría', NULL, 0),
+(13, 'Psiquiatría', NULL, 0),
+(14, 'Traumatología', NULL, 0),
+(15, 'Urología', NULL, 0),
+(16, 'Digestivo', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -766,6 +940,22 @@ CREATE TABLE `tecnica` (
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `tecnica`
+--
+
+INSERT INTO `tecnica` (`id`, `descripcion`) VALUES
+(1, 'artroscopia'),
+(2, 'ortoscopía'),
+(3, 'gastroscopia'),
+(4, 'angiografía'),
+(5, 'ecografia'),
+(6, 'laparoscopia'),
+(7, 'mamografía'),
+(8, 'rayos x'),
+(9, 'urografía'),
+(10, 'resonancia magnética');
+
 -- --------------------------------------------------------
 
 --
@@ -788,6 +978,27 @@ CREATE TABLE `tipodiagnostico` (
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `tipodiagnostico`
+--
+
+INSERT INTO `tipodiagnostico` (`id`, `descripcion`) VALUES
+(1, 'real'),
+(2, 'de riesgo'),
+(3, 'posible'),
+(4, 'de síndrome'),
+(5, 'diferencial'),
+(6, 'genérico'),
+(7, 'nosológico'),
+(8, 'patogenético'),
+(9, 'presuntivo'),
+(10, 'sindrómico'),
+(11, 'sintomático'),
+(12, 'cierto'),
+(13, 'clínico'),
+(14, 'etiológico'),
+(15, 'anatómico');
+
 -- --------------------------------------------------------
 
 --
@@ -809,6 +1020,22 @@ CREATE TABLE `tipomuestra` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `tipomuestra`
+--
+
+INSERT INTO `tipomuestra` (`id`, `descripcion`) VALUES
+(1, 'sangre'),
+(2, 'heces'),
+(3, 'orina'),
+(4, 'esputo'),
+(5, 'punción'),
+(6, 'biopsia'),
+(7, 'semen'),
+(8, 'piel'),
+(9, 'mucosa'),
+(10, 'flujo vaginal');
 
 -- --------------------------------------------------------
 
@@ -854,6 +1081,17 @@ CREATE TABLE `tipousuario` (
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `tipousuario`
+--
+
+INSERT INTO `tipousuario` (`id`, `descripcion`) VALUES
+(1, 'Administrador'),
+(2, 'Profesor organizador'),
+(3, 'Profesor'),
+(4, 'Alumno'),
+(5, 'Visitante');
+
 -- --------------------------------------------------------
 
 --
@@ -894,6 +1132,13 @@ CREATE TABLE `usuario` (
   `id_grupo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre`, `primer_apellido`, `segundo_apellido`, `login`, `password`, `email`, `token`, `activo`, `fecha_alta`, `validado`, `id_tipousuario`, `id_grupo`) VALUES
+(1, 'Rafael', 'Aznar', 'Aparici', 'rafael', '79063E8037FFF16D297A1FE65136F1251126CDDB2CC9870ECF8D653835538E85', 'rafaaznar@gmail.com', NULL, 1, '2017-05-22 00:00:00', 1, 1, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -916,6 +1161,22 @@ CREATE TABLE `zona` (
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `zona`
+--
+
+INSERT INTO `zona` (`id`, `descripcion`) VALUES
+(1, 'cabeza'),
+(2, 'brazo'),
+(3, 'torax'),
+(4, 'lumbar'),
+(5, 'pierna'),
+(6, 'pie'),
+(7, 'mano'),
+(8, 'rodilla'),
+(9, 'tobillo'),
+(10, 'coxis');
+
 -- --------------------------------------------------------
 
 --
@@ -927,6 +1188,17 @@ CREATE TABLE `zonaimagen` (
   `id_imagen` int(11) NOT NULL,
   `id_zona` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `zonaimagen`
+--
+
+INSERT INTO `zonaimagen` (`id`, `id_imagen`, `id_zona`) VALUES
+(1, 5, 1),
+(2, 1, 8),
+(3, 2, 7),
+(4, 9, 8),
+(5, 8, 9);
 
 --
 -- Índices para tablas volcadas
@@ -1255,12 +1527,12 @@ ALTER TABLE `zonaimagen`
 -- AUTO_INCREMENT de la tabla `analitica`
 --
 ALTER TABLE `analitica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `anticoagulante`
 --
 ALTER TABLE `anticoagulante`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `categoriaprofesional`
 --
@@ -1315,7 +1587,7 @@ ALTER TABLE `episodioprocedimiento`
 -- AUTO_INCREMENT de la tabla `especialidad`
 --
 ALTER TABLE `especialidad`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT de la tabla `factura`
 --
@@ -1330,7 +1602,7 @@ ALTER TABLE `grupo`
 -- AUTO_INCREMENT de la tabla `imagen`
 --
 ALTER TABLE `imagen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `instrumentalista`
 --
@@ -1340,12 +1612,12 @@ ALTER TABLE `instrumentalista`
 -- AUTO_INCREMENT de la tabla `medicamento`
 --
 ALTER TABLE `medicamento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `medico`
 --
 ALTER TABLE `medico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `modalidadepisodio`
 --
@@ -1375,7 +1647,7 @@ ALTER TABLE `posologia`
 -- AUTO_INCREMENT de la tabla `prioridad`
 --
 ALTER TABLE `prioridad`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `procedimiento`
 --
@@ -1390,12 +1662,12 @@ ALTER TABLE `property`
 -- AUTO_INCREMENT de la tabla `prueba`
 --
 ALTER TABLE `prueba`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `servicio`
 --
 ALTER TABLE `servicio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `sexo`
 --
@@ -1405,7 +1677,7 @@ ALTER TABLE `sexo`
 -- AUTO_INCREMENT de la tabla `tecnica`
 --
 ALTER TABLE `tecnica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `tipodependencia`
 --
@@ -1415,7 +1687,7 @@ ALTER TABLE `tipodependencia`
 -- AUTO_INCREMENT de la tabla `tipodiagnostico`
 --
 ALTER TABLE `tipodiagnostico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `tipoepisodio`
 --
@@ -1425,7 +1697,7 @@ ALTER TABLE `tipoepisodio`
 -- AUTO_INCREMENT de la tabla `tipomuestra`
 --
 ALTER TABLE `tipomuestra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `tipopago`
 --
@@ -1445,7 +1717,7 @@ ALTER TABLE `tiposervicio`
 -- AUTO_INCREMENT de la tabla `tipousuario`
 --
 ALTER TABLE `tipousuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `tratamiento`
 --
@@ -1455,7 +1727,7 @@ ALTER TABLE `tratamiento`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `via`
 --
@@ -1465,12 +1737,12 @@ ALTER TABLE `via`
 -- AUTO_INCREMENT de la tabla `zona`
 --
 ALTER TABLE `zona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `zonaimagen`
 --
 ALTER TABLE `zonaimagen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Restricciones para tablas volcadas
 --
