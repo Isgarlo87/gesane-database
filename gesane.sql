@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 21, 2017 at 04:11 AM
+-- Generation Time: Jun 23, 2017 at 12:49 PM
 -- Server version: 5.6.35
 -- PHP Version: 5.6.30
 
@@ -184,7 +184,6 @@ CREATE TABLE `dependencia` (
   `codigo` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `id_tipodependencia` int(11) NOT NULL,
-  `id_centro` int(11) NOT NULL,
   `id_centrosanitario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -977,7 +976,6 @@ ALTER TABLE `curso`
 ALTER TABLE `dependencia`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_dependencia_tipodependencia1_idx` (`id_tipodependencia`),
-  ADD KEY `fk_dependencia_centro1_idx` (`id_centro`),
   ADD KEY `fk_dependencia_centrosanitario1_idx` (`id_centrosanitario`);
 
 --
