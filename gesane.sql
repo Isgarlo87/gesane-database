@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 23, 2017 at 12:49 PM
+-- Generation Time: Jun 29, 2017 at 05:22 AM
 -- Server version: 5.6.35
 -- PHP Version: 5.6.30
 
@@ -93,8 +93,16 @@ INSERT INTO `anticoagulante` (`id`, `descripcion`) VALUES
 
 CREATE TABLE `categoriaprofesional` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `categoriaprofesional`
+--
+
+INSERT INTO `categoriaprofesional` (`id`, `descripcion`) VALUES
+(1, 'Médico Residente'),
+(2, 'Jefe de servicio');
 
 -- --------------------------------------------------------
 
@@ -104,7 +112,7 @@ CREATE TABLE `categoriaprofesional` (
 
 CREATE TABLE `centro` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `nombre` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true',
   `codigo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `poblacion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `provincia` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -132,7 +140,7 @@ INSERT INTO `centro` (`id`, `nombre`, `codigo`, `poblacion`, `provincia`, `telef
 
 CREATE TABLE `centrosanitario` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -162,7 +170,7 @@ CREATE TABLE `circunstanciasalta` (
 
 CREATE TABLE `curso` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -186,6 +194,16 @@ CREATE TABLE `dependencia` (
   `id_tipodependencia` int(11) NOT NULL,
   `id_centrosanitario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `dependencia`
+--
+
+INSERT INTO `dependencia` (`id`, `codigo`, `descripcion`, `id_tipodependencia`, `id_centrosanitario`) VALUES
+(1, 'QIR1', 'Quirófano intervención rápida 1', 1, 1),
+(2, 'QIR2', 'Quirófano intervención rápida 1', 1, 1),
+(3, 'H101', 'Habitación 101', 3, 1),
+(4, 'H102', 'Habitación 102', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -293,7 +311,7 @@ CREATE TABLE `episodioprocedimiento` (
 
 CREATE TABLE `especialidad` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -343,7 +361,7 @@ CREATE TABLE `factura` (
 
 CREATE TABLE `grupo` (
   `id` int(11) NOT NULL,
-  `codigo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `codigo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true',
   `id_curso` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -356,6 +374,20 @@ INSERT INTO `grupo` (`id`, `codigo`, `id_curso`, `id_usuario`) VALUES
 (1, 'ausias-mariajose-2016-2017', 1, 3),
 (2, 'ausias-isabel-2016-2017', 1, 7),
 (3, 'sagunto-maria-2016-2017', 1, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `gruposdeprofesoresconsusalumnos`
+-- (See below for the actual view)
+--
+CREATE TABLE `gruposdeprofesoresconsusalumnos` (
+`id_usuario_profesor` int(11)
+,`id_curso` int(11)
+,`id_grupo` int(11)
+,`id_usuario_alumno` int(11)
+,`activo` tinyint(1)
+);
 
 -- --------------------------------------------------------
 
@@ -458,6 +490,13 @@ CREATE TABLE `medico` (
   `id_categoriaprofesional` int(11) NOT NULL,
   `id_centrosanitario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `medico`
+--
+
+INSERT INTO `medico` (`id`, `id_servicio`, `id_especialidad`, `dni`, `nombre`, `primer_apellido`, `segundo_apellido`, `fecha_nacimiento`, `num_colegiado`, `email`, `id_categoriaprofesional`, `id_centrosanitario`) VALUES
+(1, 1, 1, '123445677', 'José', 'García', 'Pérez', '1971-11-01 00:00:00', '122331144', 'jose@med.es', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -598,7 +637,7 @@ INSERT INTO `prueba` (`id`, `informe`, `fecha_peticion`, `importe`, `id_episodio
 
 CREATE TABLE `servicio` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true',
   `codigo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `id_tiposervicio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -671,8 +710,17 @@ INSERT INTO `tecnica` (`id`, `descripcion`) VALUES
 
 CREATE TABLE `tipodependencia` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tipodependencia`
+--
+
+INSERT INTO `tipodependencia` (`id`, `descripcion`) VALUES
+(1, 'Quirofano'),
+(2, 'Box de Urgencias'),
+(3, 'Habitación ingreso');
 
 -- --------------------------------------------------------
 
@@ -785,7 +833,7 @@ CREATE TABLE `tiposervicio` (
 
 CREATE TABLE `tipousuario` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -825,9 +873,9 @@ CREATE TABLE `tratamiento` (
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `primer_apellido` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `segundo_apellido` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `nombre` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true',
+  `primer_apellido` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true',
+  `segundo_apellido` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'foreigndescription=true',
   `login` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -850,14 +898,16 @@ INSERT INTO `usuario` (`id`, `nombre`, `primer_apellido`, `segundo_apellido`, `l
 (2, 'Isabel', 'Gimeno', 'Soro', 'coordinadora', 'eb5094069f5e287ad7cfce5fc944f1c6565da2481af83fd5c24568e2481d09e3', 'isabel@ausias.net', NULL, 1, '2017-06-05 00:00:00', 1, 2, 0, 1, 0),
 (3, 'Maria José', 'García', 'García-Saavedra', 'mariajose', 'dd5b32c15fc56be8570bd485aa6baccd685384bd03c9fe947a510376cc4978a6', 'mgarcia@ausiasmarch.net', NULL, 1, '2017-06-05 00:00:00', 1, 3, 0, 1, 1),
 (4, 'Raquel', 'Gómez', 'Tortajada', 'raquel', '6e1f3da6cf8847b5c2ced23d0fa63272e6cd630dabe13b73f1d2666b0cb1444d', 'r@au.es', NULL, 1, '2017-06-05 00:00:00', 1, 4, 1, 1, 0),
-(5, 'Carlos', 'Ricart', 'Pérez', 'carlos', 'd066e50365a1d5f4028883c3e092a57d233e96b53aa3d48c172862d5b4c72670', 'segis@au.net', NULL, 1, '2017-06-04 00:00:00', 1, 4, 1, 1, 0),
-(6, 'Pepe', 'Minas', 'Plaza', 'pepe', '7c9e7c1494b2684ab7c19d6aff737e460fa9e98d5a234da1310c97ddf5691834', 'pepe@aus.net', NULL, 1, '2017-06-01 00:00:00', 1, 4, 1, 1, 0),
+(5, 'Carlos', 'Ricart', 'Pérez', 'carlos', 'd066e50365a1d5f4028883c3e092a57d233e96b53aa3d48c172862d5b4c72670', 'segis@au.net', NULL, 0, '2017-06-04 00:00:00', 1, 4, 1, 1, 0),
+(6, 'Pepe', 'Minas', 'Plaza', 'pepe', '7c9e7c1494b2684ab7c19d6aff737e460fa9e98d5a234da1310c97ddf5691834', 'pepe@aus.net', NULL, 0, '2017-06-01 00:00:00', 1, 4, 1, 1, 0),
 (7, 'Isabel', 'Gimeno', 'Soro', 'isabel', '974c66399f912525fd2b8d53ae3d0537b4e3a207830d892f5b91695c826c31b7', 'isa@ausias.net', NULL, 1, '2017-06-04 00:00:00', 1, 3, 0, 1, 1),
-(8, 'Ana', 'García', 'Ridaura', 'ana', '24d4b96f58da6d4a8512313bbd02a28ebf0ca95dec6e4c86ef78ce7f01e788ac', 'ana@ass.es', NULL, 1, '2017-06-04 00:00:00', 1, 4, 2, 1, 0),
+(8, 'Ana', 'García', 'Ridaura', 'ana', '24d4b96f58da6d4a8512313bbd02a28ebf0ca95dec6e4c86ef78ce7f01e788ac', 'ana@ass.es', NULL, 0, '2017-06-04 00:00:00', 1, 4, 2, 1, 0),
 (9, 'Maria', 'Cullell', 'García', 'maria', '94aec9fbed989ece189a7e172c9cf41669050495152bc4c1dbf2a38d7fd85627', 'm@mm.es', NULL, 1, NULL, 1, 3, 0, 2, 2),
-(10, 'Sergio', 'Faus', 'RodrÃ­guez', 'sergio', '36033babfb48ec64e197c97fb40d65e6c79f81e04c61aeccef3009e01645ab8d', 'sergio@sumail.com', NULL, 1, '2017-06-01 00:00:00', 1, 4, 2, 1, 0),
-(11, 'Sandra', 'López', 'Miranda', 'sandra', '83ed5207a41179600b50c409a460cfc229c60cb91bf06480d705c923c864e501', 'sandra@aus.es', NULL, 1, '2017-06-02 00:00:00', 1, 4, 3, 2, 0),
-(12, 'Eva', 'Tamarit', 'Ripoll', 'eva', '02b15ef87562676a8a42f33af9a0ca6aa11e491abda98cec24e4eded61ffa78d', 'eva@fkjd.es', NULL, 1, '2017-06-02 00:00:00', 1, 4, 3, 2, 0);
+(10, 'Sergio', 'Faus', 'RodrÃ­guez', 'sergio', '36033babfb48ec64e197c97fb40d65e6c79f81e04c61aeccef3009e01645ab8d', 'sergio@sumail.com', NULL, 0, '2017-06-01 00:00:00', 1, 4, 2, 1, 0),
+(11, 'Sandra', 'López', 'Miranda', 'sandra', '83ed5207a41179600b50c409a460cfc229c60cb91bf06480d705c923c864e501', 'sandra@aus.es', NULL, 0, '2017-06-02 00:00:00', 1, 4, 3, 2, 0),
+(12, 'Eva', 'Tamarit', 'Ripoll', 'eva', '02b15ef87562676a8a42f33af9a0ca6aa11e491abda98cec24e4eded61ffa78d', 'eva@fkjd.es', NULL, 0, '2017-06-02 00:00:00', 1, 4, 3, 2, 0),
+(13, 'Der', 'Dsa', 'Drw', 'der', '03587D3A7482EE565DE65B99C0C0448F95B9253AD76C96CA5D0D198AD5E563A2', 'aitrelo@ono.com', '3bd1ae6f7cb6f2ccb209', 0, '2017-06-26 04:50:00', 0, 4, 1, 1, 1),
+(14, 'Aqw', 'Azx', 'Wer', 'aseee', '03587D3A7482EE565DE65B99C0C0448F95B9253AD76C96CA5D0D198AD5E563A2', 'ew@er.es', 'ce36f497cec05af3acfc', 0, '2017-06-26 11:02:00', 0, 4, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -919,6 +969,15 @@ INSERT INTO `zonaimagen` (`id`, `id_imagen`, `id_zona`) VALUES
 (3, 2, 7),
 (4, 9, 8),
 (5, 8, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `gruposdeprofesoresconsusalumnos`
+--
+DROP TABLE IF EXISTS `gruposdeprofesoresconsusalumnos`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `gruposdeprofesoresconsusalumnos`  AS  select `p`.`id` AS `id_usuario_profesor`,`c`.`id` AS `id_curso`,`g`.`id` AS `id_grupo`,`a`.`id` AS `id_usuario_alumno`,`a`.`activo` AS `activo` from (((`usuario` `p` join `usuario` `a`) join `grupo` `g`) join `curso` `c`) where ((`g`.`id_usuario` = `p`.`id`) and (`p`.`id_tipousuario` = 3) and (`a`.`id_tipousuario` = 4) and (`a`.`id_grupo` = `g`.`id`) and (`g`.`id_curso` = `c`.`id`)) ;
 
 --
 -- Indexes for dumped tables
@@ -1251,7 +1310,7 @@ ALTER TABLE `anticoagulante`
 -- AUTO_INCREMENT for table `categoriaprofesional`
 --
 ALTER TABLE `categoriaprofesional`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `centro`
 --
@@ -1276,7 +1335,7 @@ ALTER TABLE `curso`
 -- AUTO_INCREMENT for table `dependencia`
 --
 ALTER TABLE `dependencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `destinoalta`
 --
@@ -1336,7 +1395,7 @@ ALTER TABLE `medicamento`
 -- AUTO_INCREMENT for table `medico`
 --
 ALTER TABLE `medico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `modalidadepisodio`
 --
@@ -1391,7 +1450,7 @@ ALTER TABLE `tecnica`
 -- AUTO_INCREMENT for table `tipodependencia`
 --
 ALTER TABLE `tipodependencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tipodiagnostico`
 --
@@ -1436,7 +1495,7 @@ ALTER TABLE `tratamiento`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `via`
 --
